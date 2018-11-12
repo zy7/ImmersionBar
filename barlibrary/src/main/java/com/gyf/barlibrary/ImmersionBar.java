@@ -2045,7 +2045,7 @@ public class ImmersionBar {
             if (mBarParams.keyboardEnable) {
                 mBarParams.keyboardPatch.enable(mBarParams.keyboardMode);
             } else {
-                mBarParams.keyboardPatch.disable(mBarParams.keyboardMode);
+                mBarParams.keyboardPatch.disable();
             }
         }
     }
