@@ -123,9 +123,8 @@ public class KeyboardPatch {
      * 取消监听
      */
     public void disable() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mDecorView.getViewTreeObserver().removeOnGlobalLayoutListener(onGlobalLayoutListener);
-        }
+        disable(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
+                | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
     }
 
     public void disable(int mode) {

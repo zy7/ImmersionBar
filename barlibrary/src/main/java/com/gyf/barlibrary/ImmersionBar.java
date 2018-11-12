@@ -1539,7 +1539,7 @@ public class ImmersionBar {
         //变色view
         transformView();
         //解决软键盘与底部输入框冲突问题
-        keyboardEnable();
+//        keyboardEnable();
     }
 
     /**
@@ -2045,7 +2045,7 @@ public class ImmersionBar {
             if (mBarParams.keyboardEnable) {
                 mBarParams.keyboardPatch.enable(mBarParams.keyboardMode);
             } else {
-                mBarParams.keyboardPatch.disable();
+                mBarParams.keyboardPatch.disable(mBarParams.keyboardMode);
             }
         }
     }
