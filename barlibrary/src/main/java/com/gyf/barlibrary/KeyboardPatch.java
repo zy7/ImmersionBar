@@ -114,7 +114,7 @@ public class KeyboardPatch {
 
     public void enable(int mode) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mWindow.setSoftInputMode(mode);
+//            mWindow.setSoftInputMode(mode);
             mDecorView.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);//当在一个视图树中全局布局发生改变或者视图树中的某个视图的可视状态发生改变时，所要调用的回调函数的接口类
         }
     }
@@ -129,7 +129,7 @@ public class KeyboardPatch {
 
     public void disable(int mode) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mWindow.setSoftInputMode(mode);
+//            mWindow.setSoftInputMode(mode);
             mDecorView.getViewTreeObserver().removeOnGlobalLayoutListener(onGlobalLayoutListener);
         }
     }

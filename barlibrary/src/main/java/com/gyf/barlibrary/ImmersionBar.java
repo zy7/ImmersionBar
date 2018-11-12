@@ -2036,9 +2036,6 @@ public class ImmersionBar {
      * Keyboard enable.
      */
     private void keyboardEnable() {
-        if(mBarParams.keyboardEnable)
-            return;
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (mBarParams.keyboardPatch == null) {
                 mBarParams.keyboardPatch = KeyboardPatch.patch(mActivity, mWindow);
