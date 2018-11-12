@@ -1539,7 +1539,7 @@ public class ImmersionBar {
         //变色view
         transformView();
         //解决软键盘与底部输入框冲突问题
-//        keyboardEnable();
+        keyboardEnable();
     }
 
     /**
@@ -2036,6 +2036,9 @@ public class ImmersionBar {
      * Keyboard enable.
      */
     private void keyboardEnable() {
+        if(mBarParams.keyboardEnable)
+            return;
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (mBarParams.keyboardPatch == null) {
                 mBarParams.keyboardPatch = KeyboardPatch.patch(mActivity, mWindow);
